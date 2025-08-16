@@ -188,7 +188,7 @@ Detaylı dokümantasyon için [docs/](./docs/) klasörüne bakın:
 
 ## 📄 Lisans
 
-Bu proje MIT lisansı altında lisanslanmıştır.
+Bu proje Apache 2.0 lisansı altında lisanslanmıştır.
 
 ## 🆘 Destek
 
