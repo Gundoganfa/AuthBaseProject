@@ -2,6 +2,7 @@
   "name": "authbase-project",
   "version": "1.0.0",
   "description": "Modern authentication system with Clerk",
+  "license": "Apache-2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
