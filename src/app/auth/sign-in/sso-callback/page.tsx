@@ -1,0 +1,47 @@
+import { AuthenticateWithRedirectCallback } from '@clerk/nextjs'
+
+export default function SSOCallback() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="max-w-md w-full text-center">
+        <div className="bg-white p-8 rounded-lg shadow-lg">
+          {/* Loading Animation */}
+          <div className="flex justify-center mb-6">
+            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600"></div>
+          </div>
+          
+          {/* Title */}
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            Creating Your Account
+          </h2>
+          
+          {/* Description */}
+          <p className="text-gray-600 mb-6">
+            We're setting up your account with Google. This will only take a moment...
+          </p>
+          
+          {/* Progress Steps */}
+          <div className="space-y-2 text-sm text-gray-500">
+            <div className="flex items-center justify-center space-x-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <span>Verifying Google account</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2">
+              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+              <span>Creating user profile</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2">
+              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+              <span>Redirecting to dashboard</span>
+            </div>
+          </div>
+        </div>
+        
+        {/* Hidden Clerk Component */}
+        <div className="hidden">
+          <AuthenticateWithRedirectCallback />
+        </div>
+      </div>
+    </div>
+  )
+}
